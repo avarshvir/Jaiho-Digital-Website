@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Products - Jaiho Digital</title>
+    <title>Our Products - Jaiho Digital</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <style>
-        /* Add your additional or custom styles here */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -114,7 +113,7 @@
         .product-category h3 {
             font-size: 1.75em;
             margin-bottom: 10px;
-            color: #333; /* Darker color for better visibility */
+            color: #ffffff; /* Darker color for better visibility */
         }
         .product-list {
             display: flex;
@@ -127,18 +126,18 @@
             border-radius: 8px;
             overflow: hidden;
             width: calc(33.333% - 20px);
-            box-sizing: border-box;
+            box-sizing:border-box;
             transition: box-shadow 0.3s ease;
         }
         .product-item:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .product-item img {
-            width: 100%;
-            height: auto;
+            width: 70%;
+            height: 50%;
         }
         .product-item h4 {
-            margin: 10px;
+            margin: 5px;
             font-size: 1.25em;
             color: #333; /* Darker color for better visibility */
         }
@@ -217,7 +216,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="vision.html">Vision</a></li>
                     <li><a href="docs.html">Docs</a></li>
@@ -229,47 +228,70 @@
         </div>
     </header>
 
-    <!-- Web Products Section -->
+    <!-- Products Section -->
     <main>
-        <section id="web-products" class="section">
+        <section id="products" class="section">
             <div class="container">
                 <h2>Our Web Products</h2>
-                <p>Discover our range of innovative web products designed to enhance your digital experience. From web applications to platforms and tools, we provide solutions to meet diverse needs.</p>
+                <p>Explore our diverse range of web products. We offer cutting-edge solutions across various fields to meet your specific needs.</p>
+                <br>
+                <!-- Web Products -->
                 
-                <!-- Web Product 1 -->
-                <section id="web-product1" class="product-category">
-                    <h3>Web Product 1</h3>
+                <!-- Software Products -->
+                <section id="software" class="product-category">
                     <div class="product-list">
                         <div class="product-item">
-                            <img src="images/web_product1.png" alt="Web Product 1">
+                            <img src="images/jaiho_labs_demo.png" alt="Software Product 1">
                             <div class="product-info">
-                                <h4>Product One</h4>
-                                <p>A brief description of Web Product 1, highlighting its key features and benefits.</p>
-                                <a href="web-product1.html" class="btn-primary">Learn More</a>
+                                <h4>Jaiho Labs</h4>
+                                <p>Specially made for photo color lab community. Future updates coming soon.</p>
+                                <a href="https://jaiholabs.000webhostapp.com/" target="_blank" class="btn-primary">Visit Now ↗</a>
                             </div>
                         </div>
+                        <div class="product-item">
+                            <img src="images/ed_tech_web_demo.png" alt="Software Product 1">
+                            <div class="product-info">
+                                <h4>Ed Tech Website</h4>
+                                <p>Made for Learners and Contributers. Mainly in Science and Tech Field.</a></p>
+                                <a href="https://itsarc.w3spaces.com/itsarc2.html?fname=&lname=" target="_blank" class="btn-primary">Visit Now ↗</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/tanda_blogspot_demo.png" alt="Software Product 2">
+                            <div class="product-info">
+                                <h4>News & Informative Website</h4>
+                               <p>Made in Google Blogger. News, Updates, and Information about my town.</p>
+                                <a href="https://tanda144204.blogspot.com/" target="_blank" class="btn-primary">Visit Now ↗</a>
+                            </div>
+                        </div>
+                      <!---  <div class="product-item">
+                            <img src="images/tanda_blogspot_demo.png" alt="Software Product 2">
+                            <div class="product-info">
+                                <h4>News & Informative Website</h4>
+                               <p>Made in Google Blogger. News, Updates, and Information about my town.</p>
+                                <a href="https://tanda144204.blogspot.com/" target="_blank" class="btn-primary">Visit Now ↗</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/tanda_blogspot_demo.png" alt="Software Product 2">
+                            <div class="product-info">
+                                <h4>News & Informative Website</h4>
+                               <p>Made in Google Blogger. News, Updates, and Information about my town.</p>
+                                <a href="https://tanda144204.blogspot.com/" target="_blank" class="btn-primary">Visit Now ↗</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/tanda_blogspot_demo.png" alt="Software Product 2">
+                            <div class="product-info">
+                                <h4>News & Informative Website</h4>
+                               <p>Made in Google Blogger. News, Updates, and Information about my town.</p>
+                                <a href="https://tanda144204.blogspot.com/" target="_blank" class="btn-primary">Visit Now ↗</a>
+                            </div>
+                        </div>--->
                     </div>
                 </section>
 
-                <!-- Web Product 2 -->
-                <section id="web-product2" class="product-category">
-                    <h3>Web Product 2</h3>
-                    <div class="product-list">
-                        <div class="product-item">
-                            <img src="images/web_product2.png" alt="Web Product 2">
-                            <div class="product-info">
-                                <h4>Product Two</h4>
-                                <p>A brief description of Web Product 2, highlighting its key features and benefits.</p>
-                                <a href="web-product2.html" class="btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Add more web products as needed -->
-
-            </div>
-        </section>
+                
     </main>
 
     <!-- Footer Section -->
@@ -280,34 +302,42 @@
                 <p>Learn more about Jaiho Digital, our mission, and our team.</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Contact Us</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Contact Form</a></li>
+                    <li><a href="locations.html"></a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>123 Digital Lane<br>Tech City, TC 12345<br>Email: info@jaihodigital.com</p>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@jaihodigital" target="_blank"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/jaiho_digital" target="_blank"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+                    <a href="https://github.com/avarshvir" target="_blank"><img src="images/github_icon.svg" alt="GitHub"></a>
+                    <a href="https://www.x.com/arshvir3972" target="_blank"><img src="images/X-twitter.svg" alt="X (Twitter)"></a>
+                    <a href="https://www.linkedin.com/in/arshvir-995a91203/"><img src="images/linked_in.svg" alt="LinkedIn"></a>
+                    <a href="https://in.pinterest.com/avarshvir/" target="_blank"><img src="images/pinterest.svg" alt="Pinterest"></a>
+                    <a href="https://arshvir.w3spaces.com" target="_blank"><img src="images/arshvir.png" alt="Personal Website"></a>
+                    
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Jaiho Digital. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-            </div>
+            <p><a href="copyright.html" target="_blank" style="text-decoration: none; color: #666666;">&copy; 2024 Jaiho Digital. All rights reserved.</a></p>
+        
         </div>
     </footer>
 
+    <!-- Optional JavaScript -->
     <script>
-        // Toggle hamburger menu
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            this.classList.toggle('open');
-            document.querySelector('nav').classList.toggle('open');
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('header nav');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                nav.classList.toggle('open');
+            });
         });
     </script>
 </body>
