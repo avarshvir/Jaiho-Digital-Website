@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jaiho Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+        header {
+           /* background: linear-gradient(to right, #444, #666);*/
+            background: #1f1f1f;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+        header .logo h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            border-bottom:none;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            margin: 10px 0;
+        }
+        .menu ul li a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .menu ul li a.active {
+            border-bottom: 2px solid #ffd700;
+        }
+        .menu ul li a:hover {
+            text-decoration: underline;
+        }
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+        main {
+            padding: 40px 20px;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #666;
+        }
+        .services, .products, .photo-lab, .team {
+            margin-top: 30px;
+        }
+        .service-item, .product-item, .photo-lab-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-item img, .product-item img, .photo-lab-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .service-item img:hover, .product-item img:hover, .photo-lab-item img:hover {
+            transform: scale(1.05);
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 30px 0;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .footer-section h3 {
+            color: powderblue;
+        }
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-section ul li {
+            margin-bottom: 15px;
+        }
+        footer .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .footer-section ul li a:hover {
+            color: powderblue;
+        }
+        footer .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+        }
+        footer .footer-section form input[type="email"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 70%;
+        }
+        footer .footer-section form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        footer .footer-section form button:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .menu.open {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JAIHO DIGITAL</h1>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html" class="active">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="career.html">Careers</a></li>
+               
+                </ul>
+            </nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html" class="active">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="about-us" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>At Jaiho Digital, we are passionate about harnessing the power of technology and creativity to deliver exceptional solutions that drive progress and innovation. Founded with a vision to bridge the gap between technology and creativity, Jaiho Digital has emerged as a frontrunner in the digital landscape and continue to drive innovation across various domains.</p>
+                
+                <section id="our-history" class="our-history section">
+                    <h3 style="color: #333;">Our History</h3>
+                    <p>Our company was founded with a mission to provide cutting-edge digital solutions. Over the years, we have grown into a leading player in the industry, constantly evolving and adapting to meet the changing needs of our clients.</p>
+                </section>
+
+                <section id="our-services" class="our-services section">
+                    <h3 style="color: #333;">Our Services</h3>
+                    <div class="service-item">
+                        <!--<img src="images/service1.jpg" alt="Service 1">-->
+                        <h4>Service 1</h4>
+                        <p>Our first service is designed to deliver outstanding results and exceed client expectations. We focus on quality and innovation to ensure the best outcomes.</p>
+                    </div>
+                    <div class="service-item">
+                        <!--<img src="images/service2.jpg" alt="Service 2">-->
+                        <h4>Service 2</h4>
+                        <p>Our second service provides comprehensive solutions to tackle complex challenges and drive success. Our team of experts is committed to delivering excellence.</p>
+                    </div>
+                </section>
+
+                <section id="our-products" class="our-products section">
+                    <h3 style="color: #333;">Our Products</h3>
+                    <div class="product-item">
+                        <!--<img src="images/product1.jpg" alt="Product 1">-->
+                        <h4>Product 1</h4>
+                        <p>Description of Product 1. It offers innovative features and benefits that set it apart in the market.</p>
+                        <a href="products.html#product1" class="btn-primary">Learn More</a>
+                    </div>
+                    <div class="product-item">
+                        <!--<img src="images/product2.jpg" alt="Product 2">-->
+                        <h4>Product 2</h4>
+                        <p>Description of Product 2. It is designed to address key challenges and provide effective solutions.</p>
+                        <a href="products.html#product2" class="btn-primary">Learn More</a>
+                    </div>
+                </section>
+                
+                <section id="photo-lab" class="photo-lab section">
+                    <h3 style="color: #333;">Photo Lab</h3>
+                    <div class="photo-lab-item">
+                        <!--<img src="images/photo1.jpg" alt="Photo Lab Work 1">-->
+                        <h4>Photo Lab Work 1</h4>
+                        <p>Description of Photo Lab Work 1. Showcasing our expertise in high-quality image processing and editing.</p>
+                    </div>
+                    <div class="photo-lab-item">
+                        <!--<img src="images/photo2.jpg" alt="Photo Lab Work 2">-->
+                        <h4>Photo Lab Work 2</h4>
+                        <p>Description of Photo Lab Work 2. Highlighting our skills in advanced photo enhancements and customizations.</p>
+                    </div>
+                </section>
+
+                <section id="team" class="team section">
+                    <h3 style="color: #333;">Meet Our Team</h3>
+                    <div class="team-member">
+                        <img src="images/arsh_team.jpg" alt="Team Member 1">
+                        <div>
+                            <h4><a href = "https://arshvir.w3spaces.com" target="_blank"; style="text-decoration: none; color: #333;">Arshvir</a></h4>
+                            <p>CEO & Founder</p>
+                            <p>John is the visionary behind Jaiho Digital, with extensive experience in technology and business leadership.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/arsh_team.jpg" alt="Team Member2">
+                        <div>
+                            <h4><a href = "https://arshvir.w3spaces.com" target="_blank"; style="text-decoration: none; color: #333;">Arshvir</a></h4>
+                            <p>Director</p>
+                            <p>John is the visionary behind Jaiho Digital, with extensive experience in technology and business leadership.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: jaihodigital@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+                <form action="subscribe.php" method="post">
+                    <input type="email" name="email" placeholder="Subscribe to our newsletter" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+            <!-- Social Media Links Section -->
+<div class="footer-section social-media">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@jaihodigital" target="_blank">
+            <img src="images/youtube_icon.svg" alt="YouTube" />
+        </a>
+        <a href="https://www.instagram.com/jaiho_digital" target="_blank">
+            <img src="images/instagram_icon.svg" alt="Instagram" />
+        </a>
+        <a href="https://github.com/YourPage" target="_blank">
+            <img src="images/github_icon.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.x.com/arshvir3972" target="_blank">
+            <img src="images/X-twitter.svg" alt="X(Twitter)" />
+        </a>
+        <a href="https://www.linkedin.com/in/arshvir-995a91203/" target="_blank">
+            <img src="images/linked_in.svg" alt="LinkedIn" />
+        </a>
+        
+        <a href="https://in.pinterest.com/avarshvir/" target="_blank">
+            <img src="images/pinterest.svg" alt="Pinterest" />
+        </a>
+
+        <a href="https://arshvir.w3spaces.com/" target="_blank">
+            <img src="images/arshvir.png" alt="Personal Website" />
+        </a>
+        
+    </div>
+</div>
+        <div class="footer-bottom">
+            <p><a href="copyright.html" target="_blank" style="text-decoration: none; color: #666666;">&copy; 2024 Jaiho Digital. All rights reserved.</a></p>
+        
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const menu = document.querySelector('.menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

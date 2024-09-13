@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Jaiho Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            border-bottom: 2px solid #fff;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .product-category {
+            margin-bottom: 40px;
+        }
+        .product-category h3 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item h4 {
+            margin: 10px;
+            font-size: 1.25em;
+        }
+        .product-item p {
+            margin: 0 10px 10px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .footer-section h3 {
+            margin-top: 0;
+        }
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JAIHO DIGITAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <main>
+        <section id="products" class="section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p>Explore our diverse range of products categorized by technology and application areas. We offer cutting-edge solutions across various fields to meet your specific needs.</p>
+                
+                <!-- AI-ML Products -->
+                <section id="ai-ml" class="product-category">
+                    <h3>AI & ML Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/ai-ml-product1.jpg" alt="AI-ML Product 1">
+                            <div class="product-info">
+                                <h4>AI-ML Product 1</h4>
+                                <p>A brief description of AI-ML Product 1, highlighting its key features and benefits.</p>
+                                <a href="ai-ml-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/ai-ml-product2.jpg" alt="AI-ML Product 2">
+                            <div class="product-info">
+                                <h4>AI-ML Product 2</h4>
+                                <p>A brief description of AI-ML Product 2, highlighting its key features and benefits.</p>
+                                <a href="ai-ml-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software Products -->
+                <section id="software" class="product-category">
+                    <h3>Software Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/software-product1.jpg" alt="Software Product 1">
+                            <div class="product-info">
+                                <h4>Software Product 1</h4>
+                                <p>A brief description of Software Product 1, highlighting its key features and benefits.</p>
+                                <a href="software-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/software-product2.jpg" alt="Software Product 2">
+                            <div class="product-info">
+                                <h4>Software Product 2</h4>
+                                <p>A brief description of Software Product 2, highlighting its key features and benefits.</p>
+                                <a href="software-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Enterprises Products -->
+                <section id="enterprises" class="product-category">
+                    <h3>Enterprise Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/enterprise-product1.jpg" alt="Enterprise Product 1">
+                            <div class="product-info">
+                                <h4>Enterprise Product 1</h4>
+                                <p>A brief description of Enterprise Product 1, highlighting its key features and benefits.</p>
+                                <a href="enterprise-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/enterprise-product2.jpg" alt="Enterprise Product 2">
+                            <div class="product-info">
+                                <h4>Enterprise Product 2</h4>
+                                <p>A brief description of Enterprise Product 2, highlighting its key features and benefits.</p>
+                                <a href="enterprise-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- IoT Products -->
+                <section id="iot" class="product-category">
+                    <h3>IoT Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/iot-product1.jpg" alt="IoT Product 1">
+                            <div class="product-info">
+                                <h4>IoT Product 1</h4>
+                                <p>A brief description of IoT Product 1, highlighting its key features and benefits.</p>
+                                <a href="iot-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/iot-product2.jpg" alt="IoT Product 2">
+                            <div class="product-info">
+                                <h4>IoT Product 2</h4>
+                                <p>A brief description of IoT Product 2, highlighting its key features and benefits.</p>
+                                <a href="iot-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Electronics Products -->
+                <section id="electronics" class="product-category">
+                    <h3>Electronics Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/electronics-product1.jpg" alt="Electronics Product 1">
+                            <div class="product-info">
+                                <h4>Electronics Product 1</h4>
+                                <p>A brief description of Electronics Product 1, highlighting its key features and benefits.</p>
+                                <a href="electronics-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/electronics-product2.jpg" alt="Electronics Product 2">
+                            <div class="product-info">
+                                <h4>Electronics Product 2</h4>
+                                <p>A brief description of Electronics Product 2, highlighting its key features and benefits.</p>
+                                <a href="electronics-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Robotics Products -->
+                <section id="robotics" class="product-category">
+                    <h3>Robotics Products</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="path/to/robotics-product1.jpg" alt="Robotics Product 1">
+                            <div class="product-info">
+                                <h4>Robotics Product 1</h4>
+                                <p>A brief description of Robotics Product 1, highlighting its key features and benefits.</p>
+                                <a href="robotics-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="path/to/robotics-product2.jpg" alt="Robotics Product 2">
+                            <div class="product-info">
+                                <h4>Robotics Product 2</h4>
+                                <p>A brief description of Robotics Product 2, highlighting its key features and benefits.</p>
+                                <a href="robotics-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Learn more about Jaiho Digital and our mission to drive innovation.</p>
+                <ul>
+                    <li><a href="vision.html">Our Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="Subscribe for updates" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+            <!-- Social Media Links Section -->
+<div class="footer-section social-media">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@jaihodigital" target="_blank">
+            <img src="images/youtube_icon.svg" alt="YouTube" />
+        </a>
+        <a href="https://www.instagram.com/jaiho_digital" target="_blank">
+            <img src="images/instagram_icon.svg" alt="Instagram" />
+        </a>
+        <a href="https://github.com/YourPage" target="_blank">
+            <img src="images/github_icon.svg" alt="GitHub" />
+        </a>
+        <a href="https://www.x.com/arshvir3972" target="_blank">
+            <img src="images/X-twitter.svg" alt="X(Twitter)" />
+        </a>
+        <a href="https://www.linkedin.com/in/arshvir-995a91203/" target="_blank">
+            <img src="images/linked_in.svg" alt="LinkedIn" />
+        </a>
+        
+        <a href="https://in.pinterest.com/avarshvir/" target="_blank">
+            <img src="images/pinterest.svg" alt="Pinterest" />
+        </a>
+
+        <a href="https://arshvir.w3spaces.com/" target="_blank">
+            <img src="images/arshvir.png" alt="Personal Website" />
+        </a>
+        
+    </div>
+</div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaiho Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-oP6p6z8gFpkfw4r59p2gH7QlSBuTrlmL4aGh70tjXIGt3by3Mke8gC0h6wH1Zvs6K" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybY3a6GmpV7kHs7j9crWwa8B4nJm7xG4hxjB6X8ArHs45PblS" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha384-xO5GgwUED2etjYV5EzSxI5e43HTsYQEOEewkDA5iChFkgE28EwHGj43xQ1ctJ2zR" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Jaiho Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            border-bottom: 2px solid #fff;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .services .service-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .services .service-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .footer-section h3 {
+            margin-top: 0;
+        }
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JAIHO DIGITAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="services" class="section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>At Jaiho Digital, we offer a broad range of services tailored to meet your unique needs. Whether you require cutting-edge technology solutions, creative design services, or comprehensive support for your digital projects, our experienced team is here to deliver exceptional results.</p>
+                
+                <div class="services">
+                    <!-- AI & ML Solutions -->
+                    <div class="service-item">
+                        <img src="path/to/ai-ml-service.jpg" alt="AI & Machine Learning Solutions">
+                        <h3>AI & Machine Learning Solutions</h3>
+                        <p>Leverage the power of artificial intelligence and machine learning with our innovative solutions. From predictive analytics to intelligent automation, our services help you harness data-driven insights to drive efficiency and innovation in your business.</p>
+                        <a href="products.html#ai-ml" class="btn-primary">Explore AI & ML Products</a>
+                    </div>
+                    
+                    <!-- Custom Software Development -->
+                    <div class="service-item">
+                        <img src="path/to/software-development.jpg" alt="Custom Software Development">
+                        <h3>Custom Software Development</h3>
+                        <p>We design and develop custom software solutions tailored to your specific requirements. Whether you need a web application, mobile app, or enterprise system, our team ensures that the software is robust, scalable, and aligned with your business objectives.</p>
+                        <a href="products.html#software" class="btn-primary">Explore Software Products</a>
+                    </div>
+                    
+                    <!-- IoT Solutions -->
+                    <div class="service-item">
+                        <img src="path/to/iot-solutions.jpg" alt="IoT Solutions">
+                        <h3>IoT Solutions</h3>
+                        <p>Transform your operations with our Internet of Things (IoT) solutions. We offer end-to-end services, from IoT device management to data analytics, helping you create connected ecosystems that enhance operational efficiency and customer experiences.</p>
+                        <a href="products.html#iot" class="btn-primary">Explore IoT Products</a>
+                    </div>
+                    
+                    <!-- Photo & Video Editing -->
+                    <div class="service-item">
+                        <img src="path/to/photo-video-editing.jpg" alt="Photo & Video Editing">
+                        <h3>Photo & Video Editing</h3>
+                        <p>Our photo and video editing services ensure your visual content is polished and professional. We offer everything from basic retouching to complex video edits, enhancing your images and videos to meet the highest standards.</p>
+                        <a href="about_us.html#photo-lab" class="btn-primary">Learn More About Our Photo Lab</a>
+                    </div>
+                    
+                    <!-- Graphic Design -->
+                    <div class="service-item">
+                        <img src="path/to/graphic-design.jpg" alt="Graphic Design">
+                        <h3>Graphic Design</h3>
+                        <p>Our graphic design services cover all your design needs, from branding and marketing materials to digital assets. We create visually compelling designs that effectively communicate your message and strengthen your brand identity.</p>
+                        <a href="about_us.html#design" class="btn-primary">Learn More About Our Design Services</a>
+                    </div>
+                    
+                    <!-- Data Recovery -->
+                    <div class="service-item">
+                        <img src="path/to/data-recovery.jpg" alt="Data Recovery">
+                        <h3>Data Recovery</h3>
+                        <p>We offer reliable data recovery services to retrieve lost or corrupted data from various storage media. Our experts use advanced techniques to recover your valuable information and minimize downtime, ensuring you can get back on track quickly.</p>
+                        <a href="about_us.html#data-recovery" class="btn-primary">Learn More About Data Recovery</a>
+                    </div>
+                    
+                    <!-- Photo Color Lab -->
+                    <div class="service-item">
+                        <img src="path/to/photo-color-lab.jpg" alt="Photo Color Lab">
+                        <h3>Photo Color Lab</h3>
+                        <p>Our photo color lab provides high-quality color correction and enhancement services for all types of photographs. We ensure your images achieve the perfect color balance and clarity, whether for personal or professional use.</p>
+                        <a href="about_us.html#photo-lab" class="btn-primary">Learn More About Our Photo Lab</a>
+                    </div>
+                    
+                    <!-- Web & App Development -->
+                    <div class="service-item">
+                        <img src="path/to/web-app-development.jpg" alt="Web & App Development">
+                        <h3>Web & App Development</h3>
+                        <p>We specialize in creating dynamic and responsive websites and mobile applications. Our development team focuses on delivering user-friendly, high-performance solutions that help your business thrive in the digital landscape.</p>
+                        <a href="products.html#web-app" class="btn-primary">Explore Web & App Products</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>About Jaiho Digital</h3>
+                <p>At Jaiho Digital, we are dedicated to providing innovative solutions across various domains, from advanced technology to creative services. Our team is committed to delivering excellence and helping our clients achieve their goals.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@jaihodigital.com</p>
+                <p>Phone: +123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaiho Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-oP6p6z8gFpkfw4r59p2gH7QlSBuTrlmL4aGh70tjXIGt3by3Mke8gC0h6wH1Zvs6K" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybY3a6GmpV7kHs7j9crWwa8B4nJm7xG4hxjB6X8ArHs45PblS" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha384-xO5GgwUED2etjYV5EzSxI5e43HTsYQEOEewkDA5iChFkgE28EwHGj43xQ1ctJ2zR" crossorigin="anonymous"></script>
+</body>
+</html>
