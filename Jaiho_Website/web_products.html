@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Products - Jaiho Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your additional or custom styles here */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            border-bottom: 2px solid #fff;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            z-index: 1000;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .hamburger.open .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger.open .bar2 { opacity: 0; }
+        .hamburger.open .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            header nav.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                background: #333;
+                padding: 10px;
+                width: 200px;
+            }
+            header nav ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+            header nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .product-category {
+            margin-bottom: 40px;
+        }
+        .product-category h3 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+            color: #333; /* Darker color for better visibility */
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item h4 {
+            margin: 10px;
+            font-size: 1.25em;
+            color: #333; /* Darker color for better visibility */
+        }
+        .product-item p {
+            margin: 0 10px 10px;
+            color: #666; /* Softer color for better readability */
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .footer-section h3 {
+            margin-top: 0;
+        }
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+        .social-icons a img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JAIHO DIGITAL</h1>
+            </div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Web Products Section -->
+    <main>
+        <section id="web-products" class="section">
+            <div class="container">
+                <h2>Our Web Products</h2>
+                <p>Discover our range of innovative web products designed to enhance your digital experience. From web applications to platforms and tools, we provide solutions to meet diverse needs.</p>
+                
+                <!-- Web Product 1 -->
+                <section id="web-product1" class="product-category">
+                    <h3>Web Product 1</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="images/web_product1.png" alt="Web Product 1">
+                            <div class="product-info">
+                                <h4>Product One</h4>
+                                <p>A brief description of Web Product 1, highlighting its key features and benefits.</p>
+                                <a href="web-product1.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Web Product 2 -->
+                <section id="web-product2" class="product-category">
+                    <h3>Web Product 2</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="images/web_product2.png" alt="Web Product 2">
+                            <div class="product-info">
+                                <h4>Product Two</h4>
+                                <p>A brief description of Web Product 2, highlighting its key features and benefits.</p>
+                                <a href="web-product2.html" class="btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Add more web products as needed -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Learn more about Jaiho Digital, our mission, and our team.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Digital Lane<br>Tech City, TC 12345<br>Email: info@jaihodigital.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jaiho Digital. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('open');
+            document.querySelector('nav').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
