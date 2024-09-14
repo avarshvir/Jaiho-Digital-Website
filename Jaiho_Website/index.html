@@ -157,7 +157,7 @@
             <h2>Contact Us</h2>
             <p class="section-subtitle">Have a project in mind? Let's discuss and make it happen.</p>
             <div class="contact-content">
-                <form action="#" method="post">
+                <form name="submit-to-google-sheet">
                     <div class="form-group">
                         <label for="name">Name<span>*</span>:</label>
                         <input type="text" id="name" name="name" required placeholder="Your Full Name">
@@ -176,6 +176,8 @@
                     </div>
                     <button type="submit" class="btn-primary">Send Message</button>
                 </form>
+                <div id="form-message" class="form-message"></div>
+                
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Hostel no. 3, Room no. 266, Sardar beant Singh State University, Gurdaspur, India</p>
@@ -191,6 +193,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Place the Modal Structure Here -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modal-message">Message sent successfully!</p>
+        </div>
+    </div>
 
     <!-- Footer Section -->
     <footer>
@@ -267,6 +277,79 @@
             this.classList.toggle('active');
         });
     </script>
+
+<!---<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_7eB8dR3sIa8NA2_7WN5Exh809DNKDYGzRKV6aKHbC9ZOTneG6xBDVLYYI5H_MaDw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_7eB8dR3sIa8NA2_7WN5Exh809DNKDYGzRKV6aKHbC9ZOTneG6xBDVLYYI5H_MaDw/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const formMessage = document.getElementById('form-message'); // Get the message element
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                console.log('Success!', response);
+                form.reset(); // Optionally reset the form after successful submission
+                formMessage.textContent = 'Message sent successfully!';
+                formMessage.style.color = 'green'; // Optional: Style the success message
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                formMessage.textContent = 'Failed to send message. Please try again.';
+                formMessage.style.color = 'red'; // Optional: Style the error message
+            });
+    });
+</script>--->
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz_7eB8dR3sIa8NA2_7WN5Exh809DNKDYGzRKV6aKHbC9ZOTneG6xBDVLYYI5H_MaDw/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const modal = document.getElementById('success-modal');
+    const closeBtn = document.querySelector('.close-btn');
+    const modalMessage = document.getElementById('modal-message');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                console.log('Success!', response);
+                form.reset(); // Optionally reset the form after successful submission
+                modalMessage.textContent = 'Message sent successfully!';
+                modal.style.display = 'block'; // Show the modal
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                modalMessage.textContent = 'Failed to send message. Please try again.';
+                modal.style.display = 'block'; // Show the modal with error message
+            });
+    });
+
+    // Close the modal when the user clicks on <span> (x)
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+
     
 </body>
 </html>
