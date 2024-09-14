@@ -1,0 +1,7 @@
+services:
+  - type: web    
+    name: php-contact-form    
+    env: php    
+    buildCommand: "composer install"    
+    startCommand: "php -S 0.0.0.0:10000 -t ."    
+    instances: 1
