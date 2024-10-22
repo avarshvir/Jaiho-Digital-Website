@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Integration - Jaiho Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        header .logo h1 {
+            margin: 0;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a.active {
+            border-bottom: 2px solid #fff;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+            z-index: 1000;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .hamburger.open .bar1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .hamburger.open .bar2 { opacity: 0; }
+        .hamburger.open .bar3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+            header nav.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                background: #333;
+                padding: 10px;
+                width: 200px;
+            }
+            header nav ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            header nav ul li {
+                margin: 10px 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .product-category {
+            margin-bottom: 40px;
+        }
+        .product-category h3 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+            color: #ffffff; 
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .product-item:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .product-item img {
+            width: 70%;
+            height: auto;
+        }
+        .product-item h4 {
+            margin: 5px;
+            font-size: 1.25em;
+            color: #333; 
+        }
+        .product-item p {
+            margin: 0 10px 10px;
+            color: #666; 
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            margin: 0 10px;
+        }
+        footer .footer-section h3 {
+            margin-top: 0;
+        }
+        footer .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        footer .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer .footer-bottom {
+            text-align: center;
+            padding: 10px;
+            background: #222;
+        }
+        .social-icons a img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>JAIHO DIGITAL</h1>
+            </div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="it_integration.html" class="active">IT Integration</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Reach Us At</a></li>
+                    <li><a href="career.html">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- IT Integration Section -->
+    <main>
+        <section id="integration" class="section">
+            <div class="container">
+                <h2>IT Integration Solutions</h2>
+                <p>Discover our tailored IT integration solutions that streamline processes and enhance productivity across your organization.</p>
+                <br>
+                <section id="services" class="product-category">
+                    <h3>Our Services</h3>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="images/api_integration.png" alt="Integration Service 1">
+                            <div class="product-info">
+                                <h4>API Integration</h4>
+                                <p> Connect your applications and automate workflows to ensure seamless data exchange.</p>
+                                <a href="docs.html" target="_blank" class="btn-primary">Learn More ↗</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/service2.png" alt="Integration Service 2">
+                            <div class="product-info">
+                                <h4>Cloud Integration</h4>
+                                <p> Integrate cloud services to enhance scalability and accessibility for your business.</p>
+                                <a href="docs.html" target="_blank" class="btn-primary">Learn More ↗</a>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="images/service3.png" alt="Integration Service 3">
+                            <div class="product-info">
+                                <h4>Service 3</h4>
+                                <p>Enhance collaboration through integrated platforms.</p>
+                                <a href="docs.html" target="_blank" class="btn-primary">Learn More ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3><a href="about_us.html" style="text-decoration: none; color: #ffffff;">About Us</a></h3>
+                <p><a href="about_us.html" style="text-decoration: none; color: #007bff;">Learn more</a> about Jaiho Digital, our mission, and our team.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Privacy Policy</h4>
+                <h4>Contact Form</h4>
+                <h4>Data Collection</h4>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@jaihodigital" target="_blank"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/jaiho_digital" target="_blank"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+                    <a href="https://github.com/avarshvir" target="_blank"><img src="images/github_icon.svg" alt="GitHub"></a>
+                    <a href="https://www.x.com/arshvir3972" target="_blank"><img src="images/X-twitter.svg" alt="X (Twitter)"></a>
+                    <a href="https://www.linkedin.com/in/arshvir-995a91203/"><img src="images/linked_in.svg" alt="LinkedIn"></a>
+                    <a href="https://in.pinterest.com/avarshvir/" target="_blank"><img src="images/pinterest.svg" alt="Pinterest"></a>
+                    <a href="https://avarshvir.github.io/arshvir" target="_blank"><img src="images/arshvir.png" alt="Personal Website"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><a href="copyright.html" target="_blank" style="text-decoration: none; color: #666666;">&copy; 2024 Jaiho Digital. All rights reserved.</a></p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('header nav');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('open');
+                nav.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
