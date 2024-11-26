@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Guides</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1e88e5;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        main p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product-button {
+            background-color: #1e88e5;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-button:hover {
+            background-color: #1565c0;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            padding: 15px 20px;
+            background-color: #1e88e5;
+            color: white;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ffccbc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .product-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main p {
+                font-size: 1em;
+            }
+            .product-button {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Our Product Guides</h1>
+    </header>
+    <main>
+        <p>Click on a product to learn more or access its guide. Each guide will open in a new tab for your convenience.</p>
+        <div class="button-container">
+            <a href="../Jaiho_Website/resources_guide/visio_ai_product_guide/visio_ai_helper_guide.html" target="_blank" class="product-button">Visio AI Guide</a>
+            <a href="https://www.example.com/product2" target="_blank" class="product-button">Product 2</a>
+            <a href="https://www.example.com/product3" target="_blank" class="product-button">Product 3</a>
+            <a href="https://www.example.com/product4" target="_blank" class="product-button">Product 4</a>
+            <a href="https://www.example.com/product5" target="_blank" class="product-button">Product 5</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 <a href="https://www.jaihodigital.onrender.com" target="_blank">Jaiho Digital</a>. All rights reserved.</p>
+    </footer>
+</body>
+</html>
