@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visio AI Helper</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f4f6f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 i {
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+
+        nav {
+            background: var(--dark-color);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .content {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h2 i {
+            color: var(--secondary-color);
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .section ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .section ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: 900;
+        }
+
+        .external-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+
+        .external-link {
+            display: flex;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            gap: 10px;
+        }
+
+        .external-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-chart-line"></i>Visio AI Helper</h1>
+            <p>Empowering Data Analysis and Machine Learning</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#getting-started"><i class="fas fa-rocket"></i>Getting Started</a>
+            <a href="#uploading-data"><i class="fas fa-cloud-upload-alt"></i>Uploading Data</a>
+            <a href="#data-visualization"><i class="fas fa-chart-bar"></i>Data Visualization</a>
+            <a href="#machine-learning"><i class="fas fa-brain"></i>Machine Learning</a>
+            <a href="#additional-tools"><i class="fas fa-tools"></i>Additional Tools</a>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <section id="getting-started" class="section">
+            <h2><i class="fas fa-rocket"></i>Getting Started</h2>
+            <p>Welcome to Visio AI! Your comprehensive data analysis and machine learning platform.</p>
+            <ul>
+                <li>Sign up or log in to access your personalized dashboard</li>
+                <li>Navigate through intuitive tools and options</li>
+                <li>Support for multiple data formats: CSV, Excel, JSON, and more</li>
+            </ul>
+        </section>
+
+        <section id="uploading-data" class="section">
+            <h2><i class="fas fa-cloud-upload-alt"></i>Uploading Data</h2>
+            <p>Seamless data upload with advanced preprocessing capabilities.</p>
+            <ul>
+                <li>Drag-and-drop file upload interface</li>
+                <li>Automatic data type detection</li>
+                <li>Advanced missing value handling</li>
+                <li>Real-time data preview and validation</li>
+            </ul>
+        </section>
+
+        <section id="data-visualization" class="section">
+            <h2><i class="fas fa-chart-bar"></i>Data Visualization</h2>
+            <p>Transform your data into insightful visualizations.</p>
+            <ul>
+                <li>Interactive chart generation</li>
+                <li>Multiple visualization types: bar, scatter, line, pie</li>
+                <li>Customizable color schemes and layouts</li>
+                <li>Export visualizations in high-resolution formats</li>
+            </ul>
+        </section>
+
+        <section id="machine-learning" class="section">
+            <h2><i class="fas fa-brain"></i>Machine Learning</h2>
+            <p>Advanced predictive modeling made simple.</p>
+            <ul>
+                <li>Automated model selection</li>
+                <li>Hyperparameter tuning</li>
+                <li>Model performance metrics</li>
+                <li>Easy deployment of trained models</li>
+            </ul>
+        </section>
+
+        <section id="additional-tools" class="section">
+            <h2><i class="fas fa-tools"></i>Additional Tools</h2>
+            <p>Enhance your data analysis workflow.</p>
+            <ul>
+                <li>Integrated AI-powered calculator</li>
+                <li>Collaborative notebook environment</li>
+                <li>Comprehensive report generator</li>
+                <li>AI assistant for instant help</li>
+            </ul>
+        </section>
+
+        <div class="external-links">
+            <a href="visio_documentation.html" class="external-link">
+                <i class="fas fa-book"></i>Documentation
+            </a>
+            <a href="#" class="external-link">
+                <i class="fas fa-video"></i>Tutorials
+            </a>
+            <a href="#" class="external-link">
+                <i class="fas fa-headset"></i>Support
+            </a>
+            <a href="#" class="external-link">
+                <i class="fas fa-download"></i>Download
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jaiho Digital (Visio AI) | Designed for seamless data analysis and machine learning</p>
+            <div class="social-links">
+                <a href="https://facebook.com/arsh.vir.73" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/arshvir3972" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/avarshvir" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://youtube.com/@jaihodigital" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
